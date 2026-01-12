@@ -37,13 +37,6 @@ struct NotesListView: View {
                                         NoteRowView(note: note, isDarkMode: settingsViewModel.isDarkMode)
                                     }
                                     .buttonStyle(PlainButtonStyle())
-                                    .swipeActions(edge: .trailing, allowsFullSwipe: true) {
-                                        Button(role: .destructive) {
-                                            viewModel.deleteNote(note)
-                                        } label: {
-                                            Label("Удалить", systemImage: "trash")
-                                        }
-                                    }
                                 }
                             }
                             .padding(.horizontal, 16)
